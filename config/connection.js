@@ -1,5 +1,6 @@
 // Set up MySQL connection.
 var mysql = require("mysql");
+
 var connection;
 
 if (process.env.JAWSDB_URL) {
@@ -12,7 +13,7 @@ if (process.env.JAWSDB_URL) {
     password: "",
     database: "burgers_db"
   });
-}
+};
 
 // Make connection.
 connection.connect(function (err) {
@@ -24,5 +25,4 @@ connection.connect(function (err) {
 });
 
 // Export connection for our ORM to use.
-connection.connect();
 module.exports = connection;
